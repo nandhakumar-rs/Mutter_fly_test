@@ -1,0 +1,7 @@
+<div class="card">
+  <img class="card-img-top" [src]="content.urls.thumb" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><a [routerLink]="['photos',content.user.username]">{{content.user.name}}</a></h5>
+    <p class="card-text">Likes : {{content.likes}}</p>
+  </div>
+</div>

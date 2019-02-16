@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="search(form)" class="container form p-3">
+  <mat-form-field class="input" appearance="outline">
+    <mat-label>Search For Pictures</mat-label>
+    <input matInput placeholder="Eg : Cars, Table ...." name="term" ngModel>
+  </mat-form-field>
+
+</form>
+<div class="container" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="100" (scrolled)="onScroll()">
+  <div class="card-columns">
+    <app-image-view *ngFor="let photo of allPhotos" [content]="photo"></app-image-view>
+  </div>
+</div>
